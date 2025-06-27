@@ -134,7 +134,7 @@ nasa-explorer/
 
 **Siddant Tripathi**  
 📧 Email available upon request  
-🔗 [LinkedIn](https://www.linkedin.com/in/your-link) · [GitHub](https://github.com/your-username)
+🔗 [LinkedIn](https://www.linkedin.com/in/siddant-tripathi-a895421a9/) · [GitHub](https://github.com/trisid12)
 
 ---
 
