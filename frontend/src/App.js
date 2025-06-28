@@ -31,8 +31,9 @@ function App() {
       }
 
       //check Future date
-      if(start > today || end > end){
+      if(start > today || end > today){
         setError("Dates cannot be in future..");
+        return;
       }
 
       const dayDiff = (end - start) / (1000 * 60 * 60 * 24);
@@ -47,7 +48,7 @@ function App() {
       setLoading(true);
 
       try {
-        const res = await axios.get(`http://localhost:5000/api/asteroids?start_date=${startDate}&end_date=${endDate}`);
+        const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/asteroids?start_date=${startDate}&end_date=${endDate}`);
         const allObjects = Object.values(res.data.near_earth_objects).flat();
 
         if (allObjects.length === 0) {
@@ -68,7 +69,7 @@ function App() {
 
     useEffect(() => {
       fetchAsteroids();  //fetch default on load
-    }, []);
+    }, [fetchAsteroids]);
 
     const topAsteroids = useMemo(() => {
       console.log("🔁 topAsteroids recalculated");
