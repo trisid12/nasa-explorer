@@ -1,9 +1,11 @@
 
-# NASA Explorer 🚀
+# NASA Explorer 
 
 A full-stack web application that visualizes real-time data on near-Earth asteroids using NASA’s public APIs. This project was built as part of a graduate software engineering coding challenge with a focus on usability, interactivity, clean architecture, and performance.
 
 ---
+
+
 
 ## 🌟 Features
 
@@ -19,7 +21,7 @@ A full-stack web application that visualizes real-time data on near-Earth astero
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 - **Frontend**: React, Chart.js, Axios, React Testing Library
 - **Backend**: Node.js, Express, Axios, Jest, Supertest
@@ -27,24 +29,25 @@ A full-stack web application that visualizes real-time data on near-Earth astero
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
-### 1. Clone the Repository
+### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/nasa-explorer.git
+git clone https://github.com/trisid12/nasa-explorer.git
 cd nasa-explorer
 ```
 
 ---
 
-### 2. Setup and Run the Backend
+### Setup and Run the Backend
 
 ```bash
 cd backend
 npm install
 ```
 
+### Environment Setup
 Create a `.env` file inside the `backend/` folder:
 
 ```
@@ -61,7 +64,7 @@ node server.js
 
 ---
 
-### 3. Setup and Run the Frontend
+### Setup and Run the Frontend
 
 ```bash
 cd ../frontend
@@ -73,7 +76,7 @@ npm start
 
 ---
 
-## ✅ Running Tests
+##Includes frontend and backend unit tests
 
 ### Frontend tests
 
@@ -107,9 +110,19 @@ nasa-explorer/
 └── README.md
 ```
 
+## Live Demo
+
+- Frontend (Netlify): https://nasa-explorer-ap.netlify.app/
+- Backend API (Render): https://nasa-explorer-api.onrender.com
+
+## Environment setup after deployment:
+Inside the frontend folder, in .env file
+
+REACT_APP_API_BASE_URL=https://nasa-explorer-api.onrender.com
+
 ---
 
-## 🔍 Key Implementation Notes
+##  Key Implementation Notes
 
 - NASA APOD API responses are cached for 1 hour to avoid hitting rate limits (429)
 - Date validation ensures the user selects a max 7-day range (as per NASA API limitation)
@@ -119,7 +132,7 @@ nasa-explorer/
 
 ---
 
-## 🧠 Bonus Features Implemented
+##  Bonus Features Implemented
 
 - [x] Filters & search bar
 - [x] Responsive design
@@ -132,10 +145,9 @@ nasa-explorer/
 
 ## 👤 Author
 
-**Siddant Tripathi**  
-📧 Email available upon request  
+**Siddant Tripathi**   
 🔗 [LinkedIn](https://www.linkedin.com/in/siddant-tripathi-a895421a9/) · [GitHub](https://github.com/trisid12)
 
 ---
 
-Thanks for reviewing this submission!
+Thank you for taking the time to review this project!
