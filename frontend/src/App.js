@@ -65,7 +65,7 @@ function App() {
       } finally {
         setLoading(false);
       }
-    });
+    },  [startDate, endDate]);
 
     useEffect(() => {
       fetchAsteroids();  //fetch default on load
