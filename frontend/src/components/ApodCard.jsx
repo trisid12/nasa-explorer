@@ -5,13 +5,14 @@ function ApodCard() {
   const [apod, setApod] = useState(null);
   const [error, setError] = useState("");
   const [showFullText, setShowFullText] = useState(false);
+  const baseURL = process.env.REACT_APP_API_BASE_URL;
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/apod')
+      .get(`${baseURL}/api/apod`)
       .then((res) => setApod(res.data))
       .catch(() => setError("Failed to load the NASA Picture of the Day."));
-  }, []);
+  }, [baseURL]);
 
   if (error) return <p style={{ color: "red" }}>{error}</p>;
   if (!apod) return <p>🌌 Loading space image...</p>;
