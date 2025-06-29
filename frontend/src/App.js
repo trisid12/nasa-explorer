@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import "./App.css";
 import axios from "axios";
 import AsteroidChart from "./components/AsteroidChart";
 import AsteroidInsights from "./components/AsteroidInsights";
 import ApodCard from "./components/ApodCard";
-import { useMemo } from "react";
+
 
 function App() {
   const [asteroids, setAsteroids] = useState([]);
@@ -16,7 +16,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   
-    const fetchAsteroids = async () => {
+    const fetchAsteroids = useCallback(async () => {
       setError("");
       setAsteroids([]);               //clear old asteroid data
  
@@ -65,7 +65,7 @@ function App() {
       } finally {
         setLoading(false);
       }
-    };
+    });
 
     useEffect(() => {
       fetchAsteroids();  //fetch default on load
